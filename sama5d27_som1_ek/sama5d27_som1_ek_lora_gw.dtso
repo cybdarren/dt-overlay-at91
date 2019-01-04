@@ -13,15 +13,19 @@
 #include <dt-bindings/gpio/gpio.h>
 #include "sama5d2-pinfunc.h"
 
- &spi3 {
- 	compatible = "atmel,at91rm9200-spi";
- 	status = "okay";
+ / {
+ 	fragment@0 {
+ 		target = <&spi3;
+ 		__overlay__ {
 
- 	semtech@0 {
- 		compatible = "semtech,sx1301";
- 		reg = <0>;
- 		gpios = <&pioB 2 0>;
- 		spi-max-frequency = <25000000>;
+ 			sx1301@0 {
+ 				compatible = "semtech,sx1301";
+ 				reg = <0>;
+ 				gpios = <&pioB 2 0>;
+ 				spi-max-frequency = <25000000>;
+ 				status = "okay";
+ 			};
+ 		};
  	};
  };
 
