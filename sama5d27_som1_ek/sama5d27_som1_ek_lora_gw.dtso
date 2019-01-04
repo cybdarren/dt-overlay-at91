@@ -17,13 +17,17 @@
  	fragment@0 {
  		target = <&spi3>;
  		__overlay__ {
-
+ 			#address-cells = <1>;
+ 			#size-cells = <0>;
+ 			status = "okay";
+ 			
  			sx1301@0 {
  				compatible = "semtech,sx1301";
+
  				reg = <0>;
- 				gpios = <&pioB 2 0>;
+
  				spi-max-frequency = <25000000>;
- 				status = "okay";
+
  			};
  		};
  	};
