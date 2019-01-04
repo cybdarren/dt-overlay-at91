@@ -13,6 +13,27 @@
 #include <dt-bindings/gpio/gpio.h>
 #include "sama5d2-pinfunc.h"
 
+// &spi1 {
+// 	compatible = "atmel,at91rm9200-spi";
+// 	reg = <0xfffcc000 0x4000>;
+// 	interrupts = <13 4 5>;
+// 	#address-cells = <1>;
+// 	#size-cells = <0>;
+// 	clocks = <&spi1_clk>;
+// 	clock-names = "xclk";
+// 	cs-gpos = <&pioD 0 0>;
+// 	atmel,fifo-size = <32>;
+
+// 	semtech@0 {
+// 		compatible = "semtech,sx1301";
+// 		reg = <0>;
+// 		gpios = <&pioB 2 0>;
+// 		spi-max-frequency = <25000000>;
+// 	};
+// };
+
+
+
 &i2c1 {
 	#address-cells = <1>;
 	#size-cells = <0>;
