@@ -20,7 +20,6 @@
  			#address-cells = <1>;
  			#size-cells = <0>;
  			status = "okay";
- 			cs-gpios = <&pinctrl_mikrobus1_spi_cs>;
  			
  			sx1301@0 {
  				compatible = "semtech,sx1301";
