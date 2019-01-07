@@ -34,7 +34,7 @@
 
  				reg = <0>;
 
- 				spi-max-frequency = <25000000>;
+ 				spi-max-frequency = <8000000>;
 
  //				pinctrl-0 =  <&pinctrl_mikrobus1_spi_cs>;
 
