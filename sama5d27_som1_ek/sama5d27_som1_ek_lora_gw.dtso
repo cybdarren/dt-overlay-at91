@@ -27,15 +27,18 @@
  			pinctrl-names = "default";
  			pinctrl-0 = <&pinctrl_mikrobus_spi &pinctrl_mikrobus1_spi_cs>;
 
+ 			cs-gpios = <PIN_PD0__FLEXCOM4_IO4>;
+ 			num-chipselects = <1>;
+
  			sx1301@0 {
  				#address-cells = <1>;
- 				#size-cells = <1>;
+ 				#size-cells = <0>;
  				compatible = "semtech,sx1301";
 
  				reg = <0>;
 
  				spi-max-frequency = <4000000>;
- 				cs-gpios = <PIN_PD0__FLEXCOM4_IO4>;
+
  //				pinctrl-0 =  <&pinctrl_mikrobus1_spi_cs>;
 
  			};
