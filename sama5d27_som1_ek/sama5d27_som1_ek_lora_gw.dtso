@@ -23,10 +23,13 @@
  			#address-cells = <1>;
  			#size-cells = <0>;
  			status = "okay";
+ 
+ 			pinctrl-names = "default";
+ 			pinctrl-0 = <&pinctrl_mikrobus_spi &pinctrl_mikrobus1_spi_cs>;
 
- 			cs-gpios = <&pinctrl_mikrobus1_spi_cs>; 
- 			
  			sx1301@0 {
+ 				#address-cells = <1>;
+ 				#size-cells = <1>;
  				compatible = "semtech,sx1301";
 
  				reg = <0>;
