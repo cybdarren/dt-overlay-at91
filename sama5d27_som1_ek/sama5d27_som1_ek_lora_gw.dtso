@@ -41,7 +41,7 @@
  		target = <&leds>;
 
  		__overlay__ {
- 			green {
+ 			&green {
  				status = "disabled";
  			};
  		};
