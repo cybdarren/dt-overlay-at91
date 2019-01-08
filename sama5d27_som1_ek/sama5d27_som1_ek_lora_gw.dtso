@@ -20,12 +20,12 @@
  		target = <&spi3>;
 
  		__overlay__ {
- 			#address-cells = <1>;
- 			#size-cells = <0>;
+ //			#address-cells = <1>;
+ //			#size-cells = <0>;
  			status = "okay";
  
- 			pinctrl-names = "default";
- 			pinctrl-0 = <&pinctrl_mikrobus_spi &pinctrl_mikrobus1_spi_cs>;
+ //			pinctrl-names = "default";
+ //			pinctrl-0 = <&pinctrl_mikrobus_spi &pinctrl_mikrobus1_spi_cs>;
 
  			sx1301@0 {
  				#address-cells = <1>;
