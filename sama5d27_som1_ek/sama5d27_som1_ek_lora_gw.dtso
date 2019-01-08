@@ -12,27 +12,41 @@
 
 #include <dt-bindings/gpio/gpio.h>
 #include "sama5d2-pinfunc.h"
+#include "dt-bindings/pinctrl/at91.h"
 
- / {
-	compatible = "atmel,sama5d27-som1-ek", "atmel,sama5d27-som1", "atmel,sama5d27", "atmel,sama5d2", "atmel,sama5";
+&spi3 {
+	#address-cells = <1>;
+	#size-cells = <0>;
 
- 	fragment@0 {
- 		target = <&spi3>;
+	spidev0: spidev@0 {
+		compatible = "semtech,sx1301";
+		status = "okay";
+		reg = <0>;
+		spi-max-frequency = <4000000>;
+	};
+};
 
- 		__overlay__ {
- 			#address-cells = <1>;
- 			#size-cells = <0>;
+
+ // / {
+	// compatible = "atmel,sama5d27-som1-ek", "atmel,sama5d27-som1", "atmel,sama5d27", "atmel,sama5d2", "atmel,sama5";
+
+ // 	fragment@0 {
+ // 		target = <&spi3>;
+
+ // 		__overlay__ {
+ // 			#address-cells = <1>;
+ // 			#size-cells = <0>;
 
 
- 			spidev0: spidev@0 {
- 				compatible = "semtech,sx1301";
- 				status = "okay";
- 				reg = <0>;
- 				spi-max-frequency = <4000000>;
- 			};
- 		};
- 	};
- };
+ // 			spidev0: spidev@0 {
+ // 				compatible = "semtech,sx1301";
+ // 				status = "okay";
+ // 				reg = <0>;
+ // 				spi-max-frequency = <4000000>;
+ // 			};
+ // 		};
+ // 	};
+ // };
 
 
 
