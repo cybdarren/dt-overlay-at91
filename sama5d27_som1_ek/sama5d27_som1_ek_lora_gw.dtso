@@ -33,7 +33,6 @@
  				#address-cells = <1>;
  				#size-cells = <0>;
  //				compatible = "semtech,sx1301";
- 				compatible = "spidev";
 
  				reg = <0>;
 
