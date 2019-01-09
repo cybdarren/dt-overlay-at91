@@ -17,7 +17,7 @@
 &spi3 {
 	#address-cells = <1>;
 	#size-cells = <0>;
-	cs-gpios = <&pioA PIN_PD0 GPIO_ACTIVE_LOW>, <0>, <0>, <0>;
+	cs-gpios = <&pioA PIN_PD0 GPIO_ACTIVE_LOW>, <&pioA PIN_C31 GPIO_ACTIVE_LOW>, <0>, <0>;
 
 	spidev0: spidev@0 {
 		compatible = "semtech,sx1301";
