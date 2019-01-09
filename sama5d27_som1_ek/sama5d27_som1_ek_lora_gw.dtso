@@ -17,92 +17,15 @@
 &spi3 {
 	#address-cells = <1>;
 	#size-cells = <0>;
+	cs-gpios = <&pioD PIN_PD0 GPIO_ACTIVE_LOW>, <0>, <0>, <0>;
 
 	spidev0: spidev@0 {
 		compatible = "semtech,sx1301";
 		status = "okay";
 		reg = <0>;
-		spi-max-frequency = <4000000>;
+		spi-max-frequency = <8000000>;
 	};
 };
 
 
- // / {
-	// compatible = "atmel,sama5d27-som1-ek", "atmel,sama5d27-som1", "atmel,sama5d27", "atmel,sama5d2", "atmel,sama5";
-
- // 	fragment@0 {
- // 		target = <&spi3>;
-
- // 		__overlay__ {
- // 			#address-cells = <1>;
- // 			#size-cells = <0>;
-
-
- // 			spidev0: spidev@0 {
- // 				compatible = "semtech,sx1301";
- // 				status = "okay";
- // 				reg = <0>;
- // 				spi-max-frequency = <4000000>;
- // 			};
- // 		};
- // 	};
- // };
-
-
-
-// &i2c1 {
-// 	#address-cells = <1>;
-// 	#size-cells = <0>;
-
-// 	ov5640: camera@3c {
-// 		compatible = "ovti,ov5640";
-// 		reg = <0x3c>;
-// 		pinctrl-names = "default";
-// 		pinctrl-0 = <&pinctrl_sensor_power &pinctrl_sensor_reset>;
-// 		reset-gpios = <&pioA PIN_PD6 GPIO_ACTIVE_LOW>;
-// 		powerdown-gpios = <&pioA PIN_PD7 GPIO_ACTIVE_HIGH>;
-// 		clocks = <&isc>;
-// 		clock-names = "xclk";
-// 		assigned-clocks = <&isc>;
-// 		assigned-clock-rates = <25000000>;
-// 		status = "okay";
-
-// 		port {
-// 			ov5640_0: endpoint {
-// 				remote-endpoint = <&isc_0>;
-// 				bus-width = <8>;
-// 				hsync-active = <1>;
-// 				vsync-active = <1>;
-// 				pclk-sample = <1>;
-// 			};
-// 		};
-// 	};
-// };
-
-// &isc {
-// 	pinctrl-0 = <&pinctrl_isc_base &pinctrl_isc_data_8bit>;
-
-// 	port {
-// 		isc_0: endpoint@0 {
-// 			remote-endpoint = <&ov5640_0>;
-// 			bus-width = <8>;
-// 			data-shift = <2>;
-// 			hsync-active = <0>;
-// 			vsync-active = <0>;
-// 			pclk-sample = <1>;
-// 		};
-// 	};
-// };
-
-// &pioA {
-// 	pinctrl_sensor_power: sensor_power {
-// 		pinmux = <PIN_PB12__GPIO>;
-// 		bias-disable;
-// 	};
-
-// 	pinctrl_sensor_reset: sensor_reset {
-// 		pinmux = <PIN_PB11__GPIO>;
-// 		bias-disable;
-// 	};
-// };
 
