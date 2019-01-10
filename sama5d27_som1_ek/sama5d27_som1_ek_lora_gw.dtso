@@ -44,6 +44,8 @@
 	output-low;
 };
 
-
+&pinctrl_mikrobus2_rst {
+	output-low;
+};
 
 
