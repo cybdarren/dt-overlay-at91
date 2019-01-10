@@ -24,9 +24,7 @@
 		compatible = "semtech,sx1301";
 		status = "okay";
 		reg = <0>;
-		spi-max-frequency = <8000000>;
-		pinctrl-names = "default";
-		pinctrl-0 = <&pinctrl_mikrobus1_rst>;
+		spi-max-frequency = <10000000>;
 	};
 
 	// SPI connected device on mikroBUS2 (CS = PC31)
@@ -34,18 +32,9 @@
 		compatible = "semtech,sx1301";
 		status = "okay";
 		reg = <1>;
-		spi-max-frequency = <8000000>;
-		pinctrl-names = "default";
-		pinctrl-0 = <&pinctrl_mikrobus2_rst>;
+		spi-max-frequency = <10000000>;
 	};
 };
 
-&pinctrl_mikrobus1_rst {
-	output-low;
-};
-
-&pinctrl_mikrobus2_rst {
-	output-low;
-};
 
 
