@@ -37,7 +37,7 @@
 };
 
 / {
-	fragment@0 {
+	fragment@1 {
 		target-path = "/ahb";
 
 		__overlay__ {
