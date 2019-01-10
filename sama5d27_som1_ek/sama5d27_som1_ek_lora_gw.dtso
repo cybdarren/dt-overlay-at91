@@ -36,5 +36,9 @@
 	};
 };
 
+&pinctrl_mikrobus1_rst {
+	output-low;
+};
+
 
 
