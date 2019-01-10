@@ -36,8 +36,11 @@
 	};
 };
 
-&pinctrl_mikrobus1_rst {
-	output-low;
+&pinctrl {
+	radio_control {
+		pinmux = <PIN_PB2__GPIO>;
+		output-low;
+	};
 };
 
 
