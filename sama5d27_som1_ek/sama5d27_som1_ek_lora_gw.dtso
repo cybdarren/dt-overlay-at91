@@ -36,12 +36,13 @@
 	};
 };
 
-&pinctrl {
-	radio_control {
-		pinmux = <PIN_PB2__GPIO>;
+&ahb {
+	radio_reset {
+		compatible = "gpio";
+		pinctrl-names = "default";
+		pinctrl-0 = <&pinctrl_mikrobus1_rst>;
 		output-low;
 	};
 };
-
 
 
