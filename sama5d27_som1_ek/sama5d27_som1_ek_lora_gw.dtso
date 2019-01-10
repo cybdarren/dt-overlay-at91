@@ -36,12 +36,18 @@
 	};
 };
 
-&ahb {
-	radio_reset {
-		compatible = "gpio";
-		pinctrl-names = "default";
-		pinctrl-0 = <&pinctrl_mikrobus1_rst>;
-		output-low;
+/ {
+	fragment@0 {
+		target-path = "/ahb";
+
+		__overlay__ {
+			radio_reset {
+				compatible = "gpio";
+				pinctrl-names = "default";
+				pinctrl-0 = <&pinctrl_mikrobus1_rst>;
+				output-low;
+			};
+		};
 	};
 };
 
